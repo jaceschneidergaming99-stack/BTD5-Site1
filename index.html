@@ -43,14 +43,15 @@
     </style>
 
     <script>
-        // Tell Ruffle to look inside the ruffle folder for its engine files
         window.RufflePlayer = window.RufflePlayer || {};
         window.RufflePlayer.config = {
-            publicPath: "ruffle/" 
+            publicPath: "ruffle/",
+            allowScriptAccess: true,
+            base: "./"
         };
     </script>
 
-    <!-- Load ruffle.js from inside your ruffle folder -->
+    <!-- Load ruffle.js from your ruffle folder -->
     <script src="ruffle/ruffle.js"></script>
 </head>
 <body>
@@ -58,7 +59,8 @@
     <h1>🎈 Bloons Tower Defense 5 🎈</h1>
 
     <div class="game-wrapper">
-        <embed src="btd5.swf" width="100%" height="100%"></embed>
+        <!-- Direct link to the SWF -->
+        <embed src="btd5.swf" width="100%" height="100%" allowscriptaccess="always"></embed>
     </div>
 
     <div class="footer">
@@ -67,4 +69,3 @@
 
 </body>
 </html>
-
